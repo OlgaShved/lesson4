@@ -1,0 +1,120 @@
+body {
+	font-family: “Trebuchet MS”, Trebuchet, Arial, sans-serif;
+	font-size: 14px;
+	background: #404047;
+	border: 15px solid #FFF;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+html,body {
+	/* Что бы растянуть блок на всю высоту */
+	min-height: 100%;
+	height: 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+section { /*class="wrapper"*/
+	/* Что бы растянуть блок на всю высоту*/
+	height: auto;
+	min-height: 100%;
+	/*margin-bottom: 22%;!*чтоб была рамка внизу, больше никак не придумала*!*/
+}
+
+header,footer {
+	/** Свойстово display не нужно так как это блоки и так отображаються как блочные **/
+	/*display: block;*/
+	color: #dd7981;
+	text-align: center;
+	background-color: #4e4f58;
+	padding: 10px;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+footer {
+	/** Лучше задать ширину и отцентровать по центру **/
+	max-width: 530px;
+	margin: 20px auto;
+	/*margin-left:30%;*/
+	/*margin-right:30%;*/
+	/*margin-top: 20px;*/
+}
+
+h1,p {
+	margin: 0;
+}
+
+label {
+	display:block;
+	border-bottom: 2px solid transparent;
+	border-top: 2px solid transparent; /* Прозрачные границы */
+	/*margin-left:30%;*/
+	/*margin-right:30%;*/
+	/** Лучше задать ширину и отцентровать по центру **/
+	max-width: 530px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+label:nth-child(odd) {
+	background-color: #87819d;
+}
+
+label:nth-child(2n) {
+	background-color: #787591;
+}
+
+label:hover {
+    background-color: #655c76;
+    border-top: 2px solid #fff; /* Параметры линии вверху */
+    border-bottom: 2px solid #fff; /* Параметры линии внизу */
+	transition: all 0.5s ease;
+}
+
+label:active {
+	background-color: #dd7981;
+	transition: all 0.1s ease;
+}
+
+input[type="checkbox"] {
+	vertical-align: middle;
+}
+
+input + span {
+	color: #fff;
+}
+
+span.description {
+	color: #C4C0D1;
+	font-size: 10px;
+}
+
+input:checked ~ span {
+	color: #9995AB;
+	text-decoration: line-through;
+}
+// input:checked + span + span {
+// 	color: #9995AB;
+// 	text-decoration: line-through; /*а как зачеркнуть всё сразу и дужки тоже*/
+// }s
+
+span.description:before {
+	content: '(';
+	color: #bbb7cb;
+}
+
+span.description:after {
+	content: ')';
+	color: #bbb7cb;
+}
+
+input#icon {
+	transform: scale(1.5);
+}
